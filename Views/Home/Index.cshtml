@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<br/>
+<div class="jumbotron">
+    <div class="container">
+        <h2>Cross Platform Asp.Net Core Web Application Deployed on</h2>
+        <h3>Operating System -- @ViewData["Message"]</h3>
+        <h3>Framework -- @ViewData["Framework"]</h3>
+        <h3>Process Architecture-- @ViewData["ProcessArchitecture"]</h3>
+      
+
+            <h3>Enviornment Variables :</h3>
+        
+                @foreach (System.Collections.DictionaryEntry item in ViewBag.EnviornmentVariables)
+                {
+                    <div class="row">
+                        <div class="col-md-3"><span class="wordwrap">@item.Key</span></div>
+                        <div class="col-md-9"><span class="wordwrap">@item.Value</span></div>
+                    </div>
+
+                }
+
+                    
+    </div>
+</div>
